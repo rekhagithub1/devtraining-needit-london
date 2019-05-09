@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="needit" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element label="priority" max_length="40" name="new_field1" type="integer"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="short description" max_length="40" name="number" type="string"/>
+        <element label="Assigned to" max_length="32" name="u_assigned_to" reference="cmdb_ci_appl_dot_net" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Configuration item" max_length="40" name="u_configuration_item" type="string"/>
+        <element label="Due Date" max_length="40" name="u_due_date" type="due_date"/>
+        <element label="newfield3" max_length="40" name="u_new_field_3" type="integer"/>
+        <element label="Number" max_length="40" name="u_number" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="parent" max_length="40" name="u_parent" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="short description" max_length="40" name="u_short_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="open" label="state" max_length="40" name="u_state" type="string">
+            <choice>
+                <element inactive_on_update="false" label="open" sequence="0" value="open"/>
+                <element inactive_on_update="false" label="work in progress" sequence="1" value="work in progress"/>
+                <element inactive_on_update="false" label="closed complete" sequence="2" value="closed complete"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="u_assigned_to"/>
+        </index>
+    </element>
+</database>
